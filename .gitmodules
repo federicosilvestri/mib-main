@@ -1,0 +1,8 @@
+[submodule "mib-api-gateway"]
+	path = mib-api-gateway
+	url = git@github.com:federicosilvestri/mib-api_gateway.git
+	branch = master
+[submodule "mib-users"]
+	path = mib-users
+	url = git@github.com:federicosilvestri/mib-users.git
+	branch = master
