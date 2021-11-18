@@ -54,7 +54,7 @@ services:
     # to allow the replication.
     #
     restart: always
-    build: ./mib_api_gateway
+    build: ./mib-api-gateway
     volumes:
       - static_contents:/static
     env_file:
@@ -63,9 +63,6 @@ services:
       - USERS_MS_HOST=users_ms_worker
     labels:
       - mib.api_gateway_worker
-    depends_on:
-      redis_cache:
-        condition: service_healthy
 
   # -------------------------------------------- #
   # Common Services                              #
@@ -98,7 +95,7 @@ services:
     #
     # Users Microservice Migrations
     #
-    build: ./mib-users
+    build: ./mib-user
     env_file:
       - users_ms.conf
     environment:
@@ -113,7 +110,7 @@ services:
     #
     # Users Microservice Worker node
     #
-    build: ./mib-users
+    build: ./mib-user
     restart: on-failure
     env_file:
       - users_ms.conf
