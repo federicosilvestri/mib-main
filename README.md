@@ -74,7 +74,7 @@ you have to run
 
 To startup application you can issue the following command:
 
-`docker-compose run`
+`docker-compose up`
 
 #### Application Environment
 
